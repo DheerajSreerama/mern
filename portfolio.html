@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dheeraj Sreerama | Full Stack Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Navbar */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  z-index:1000;
+}
+
+.logo{
+  font-size:24px;
+  font-weight:700;
+  background: linear-gradient(45deg,#00f5ff,#00ff9d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  margin-left:30px;
+  font-weight:500;
+  position:relative;
+}
+
+nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:#00f5ff;
+  left:0;
+  bottom:-5px;
+  transition:0.3s;
+}
+
+nav a:hover::after{
+  width:100%;
+}
+
+/* Sections */
+section{
+  padding:120px 8%;
+}
+
+/* Hero */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.hero h1{
+  font-size:55px;
+  font-weight:900;
+}
+
+.hero span{
+  background: linear-gradient(45deg,#00f5ff,#00ff9d);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin:20px 0;
+  max-width:600px;
+  opacity:0.8;
+}
+
+.btn{
+  padding:12px 28px;
+  border-radius:30px;
+  background: linear-gradient(45deg,#00f5ff,#00ff9d);
+  color:black;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 20px #00f5ff;
+}
+
+/* Glass Card */
+.card{
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,255,255,0.2);
+}
+
+/* Section Title */
+.section-title{
+  font-size:32px;
+  margin-bottom:40px;
+  font-weight:700;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  width:60px;
+  height:4px;
+  background:#00f5ff;
+  display:block;
+  margin-top:10px;
+}
+
+/* Skills */
+.skills span{
+  display:inline-block;
+  padding:10px 18px;
+  border-radius:30px;
+  margin:8px;
+  background:rgba(0,255,255,0.1);
+  border:1px solid rgba(0,255,255,0.3);
+  transition:0.3s;
+}
+
+.skills span:hover{
+  background:#00f5ff;
+  color:black;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:30px;
+  background:rgba(0,0,0,0.3);
+  margin-top:50px;
+  font-size:14px;
+  opacity:0.8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero h1{
+    font-size:38px;
+  }
+  nav{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">Dheeraj.</div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hello, I'm <span>Dheeraj Sreerama</span></h1>
+  <p>Computer Science undergraduate passionate about building modern, responsive and scalable web applications. Focused on creating clean UI and impactful user experiences.</p>
+  <a href="#contact" class="btn">Let's Connect</a>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="card">
+    I am currently pursuing B.Tech in Computer Science (2023–2027) with a CGPA of 7.9.
+    Skilled in Java, Python, HTML, CSS, JavaScript, SQL and MySQL.
+    I love building interactive applications and continuously exploring backend technologies.
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills">
+    <span>Java</span>
+    <span>Python</span>
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>SQL</span>
+    <span>MySQL</span>
+    <span>Git</span>
+    <span>VS Code</span>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Healthcare Chatbot</h3>
+      <p>Community-driven chatbot providing disease awareness and healthcare support with user-friendly interface.</p>
+      <br>
+      <strong>Tech:</strong> HTML, CSS, JavaScript
+    </div>
+
+    <div class="card">
+      <h3>Resume Builder Application</h3>
+      <p>Automated resume generator with predefined templates and PDF export ensuring professional formatting.</p>
+      <br>
+      <strong>Tech:</strong> HTML, CSS, JavaScript
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="card">
+    <p><strong>Phone:</strong> +91 7013060929</p>
+    <p><strong>Email:</strong> sreeramadheeraj12345@gmail.com</p>
+    <p><strong>GitHub:</strong> github.com/Dheerajsreerama</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Dheeraj Sreerama | Designed with passion 🚀
+</footer>
+
+</body>
+</html>
